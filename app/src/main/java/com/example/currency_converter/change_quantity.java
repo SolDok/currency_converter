@@ -25,8 +25,8 @@ public class change_quantity extends AppCompatActivity {
         Bundle argument = getIntent().getExtras();
         String valuteName = argument.get("Name").toString();
         Double valuteValue = (Double)  argument.get("Value");
-        quantityValutaName.setText(valuteName + " = ");
-        quantityValuteOutput.setText(valuteValue.toString());
+        quantityValutaName.setText(valuteName + "\n" + "=");
+        quantityValuteOutput.setText(String.format("%.2f",valuteValue) + " RUB");
         quantityValuteInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -37,7 +37,7 @@ public class change_quantity extends AppCompatActivity {
                 if (quantityValuteInput.getText().toString().isEmpty()) return;
                 Float input = Float.parseFloat(charSequence.toString());
                 Double result =  input * valuteValue;
-                quantityValuteOutput.setText(String.format("%.2f", result) + "RUB");
+                quantityValuteOutput.setText(String.format("%.2f", result) + " RUB");
             }
 
             @Override
