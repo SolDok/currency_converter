@@ -2,20 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="7dp">
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/valute_name"
+        android:id="@+id/valuta_name"
+        style="@style/ListItemStyle"
         android:layout_width="wrap_content"
+        android:maxWidth="300dp"
         android:layout_height="wrap_content"
         android:text="Name">
     </TextView>
 
     <TextView
-        android:id="@+id/valute_value"
+        android:id="@+id/valuta_value"
+        style="@style/ListItemStyle"
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="7dp"
         android:text="value"></TextView>
 </RelativeLayout>
